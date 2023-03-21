@@ -26,11 +26,9 @@
                                 <TapGestureRecognizer CommandParameter="{Binding .}"
                                                       Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:MonkeysViewModel}}, Path=GoToDetailsCommand}"/>
                             </Frame.GestureRecognizers>
-                            
-                            
-                            
+
                             <Grid Padding="0" ColumnDefinitions="125,*">
-                                
+
                                 <Image Aspect="AspectFill"
                                        Source="{Binding Image}"
                                        HeightRequest="125"
@@ -38,8 +36,7 @@
 
                                 <VerticalStackLayout Grid.Column="1"
                                                      Padding="10"
-                                                     VerticalOptions="Center"
-                                                     >
+                                                     VerticalOptions="Center">
 
                                     <Label Text="{Binding Name}" Style="{StaticResource LargeLabel}"/>
                                     <Label Text="{Binding Location}" Style="{StaticResource MediumLabel}"/>
@@ -51,7 +48,6 @@
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-
         </CollectionView>
 
         <Button Text="Get Monkeys"

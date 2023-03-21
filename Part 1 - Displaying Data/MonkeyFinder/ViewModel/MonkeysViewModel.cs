@@ -46,6 +46,7 @@ public partial class MonkeysViewModel : BaseViewModel
             if (first is null)
                 return;
 
+            IsBusy = true;
             await Shell.Current.DisplayAlert("Legközelebbi majom",
                 $"{first.Name} in {first.Location}", "OK");
 
@@ -58,7 +59,10 @@ public partial class MonkeysViewModel : BaseViewModel
                           $"Nem érem el a legközelebbi majmot: {ex.Message}", "OK");
 
         }
-
+        finally
+        {
+            IsBusy = false;
+        }
 
     }
 

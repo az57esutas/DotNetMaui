@@ -36,8 +36,6 @@ public class MonkeyService
         monkeyList = JsonSerializer.Deserialize<List<Monkey>>(contents);
         */
 
-
-
         return monkeyList;
     }
 }

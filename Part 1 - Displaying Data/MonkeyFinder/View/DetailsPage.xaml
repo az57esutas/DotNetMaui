@@ -40,6 +40,14 @@
                 </Frame>
             </Grid>
 
+            <Button Text="Mutasd a térképen"
+                    Command="{Binding OpenMapCommand}"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"
+                    Margin="8"
+                    Style="{StaticResource ButtonOutline}"                
+                    />
+            
             <VerticalStackLayout Padding="10" Spacing="10">
                 <Label Text="{Binding Monkey.Details}"
                        Style="{StaticResource MediumLabel}"/>
